@@ -25,7 +25,7 @@ body {
 }
 
 .artwork {
-  width: 50%;
+  width: min(100% - 20px, 840px);
   border-radius: 8px;
 
 }
