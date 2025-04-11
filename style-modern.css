@@ -1,0 +1,299 @@
+/* Style Option 2: Modern & Clean */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #495057; /* Dark grey for text */
+    background-color: #ffffff; /* Clean white background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px; /* Slightly wider */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', 'Helvetica Neue', Arial, sans-serif; /* Slab for headings */
+    color: #212529; /* Near black for strong headings */
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.4em;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 2.3em;
+    margin-bottom: 1em;
+    text-align: center;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #007bff; /* Bright blue accent */
+    color: #343a40;
+}
+
+h3 {
+    font-size: 1.7em;
+    color: #0056b3; /* Slightly darker blue for subheadings */
+    margin-top: 1.8em;
+    margin-bottom: 0.7em;
+}
+
+p {
+    margin-bottom: 1.1em;
+    font-size: 1rem;
+    color: #5a6268; /* Softer grey for paragraph text */
+}
+
+a {
+    color: #007bff; /* Bright blue links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 0.7em;
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+ul li::before { /* Custom bullet */
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Header */
+header {
+    background-color: #ffffff; /* White header */
+    color: #343a40;
+    padding: 0.8em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-bottom: 1px solid #e9ecef;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #0056b3; /* Header logo color */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 28px;
+    padding-left: 0; /* Override general ul li */
+}
+header nav ul li::before {
+    content: none; /* Remove custom bullet from nav */
+}
+
+header nav ul li a {
+    color: #495057; /* Dark grey nav links */
+    font-weight: 500; /* Medium weight */
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff; /* Blue hover */
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    /* Using a modern tech/energy related image */
+    background: linear-gradient(rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.1)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    background-color: #f8f9fa; /* Light fallback */
+    color: #212529;
+    text-align: center;
+    padding: 7em 0; /* More padding */
+}
+
+#hero h1 {
+    color: #0056b3;
+}
+
+#hero .subtitle {
+    font-size: 1.3em;
+    margin-bottom: 2em;
+    color: #495057;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Bright blue */
+    color: #fff;
+    padding: 14px 35px; /* Larger button */
+    border-radius: 50px; /* Pill shape */
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue */
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Sections */
+section {
+    padding: 5em 0; /* More vertical space */
+}
+
+#about {
+    background-color: #f8f9fa; /* Light grey */
+}
+
+#services {
+    background-color: #ffffff; /* White */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2.5em;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 2.5em; /* More padding */
+    border-radius: 8px; /* Slightly more rounded */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Soft shadow */
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    border-radius: 6px; /* Match item radius */
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #e9ecef; /* Light grey */
+    text-align: center;
+}
+
+#contact h2 {
+    border-bottom-color: #007bff; /* Blue accent */
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.25em;
+    margin-top: 1.5em;
+    color: #343a40;
+}
+
+.contact-email a {
+    color: #0056b3;
+    font-weight: 500;
+}
+.contact-email a:hover {
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark grey footer */
+    color: #adb5bd; /* Light grey text */
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 4em;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+    color: #adb5bd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 1em;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #hero {
+        padding: 5em 0;
+    }
+
+    section {
+        padding: 4em 0;
+    }
+}

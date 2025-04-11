@@ -1,0 +1,317 @@
+/* Style Option 4: Tech / Consulting Inspired */
+
+/* General Styles */
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Clean, modern sans-serif */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333d47; /* Dark grey-blue text */
+    background-color: #ffffff; /* White background */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Wider container */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Consistent font */
+    color: #1a2b3c; /* Very dark blue */
+    font-weight: 700; /* Bold headings */
+}
+
+h1 {
+    font-size: 2.8em; /* Slightly smaller than modern */
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.1em;
+    margin-bottom: 1.2em;
+    text-align: left; /* Align section headers left */
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid #005f73; /* Muted teal/blue accent */
+    color: #1a2b3c;
+}
+
+h3 {
+    font-size: 1.4em; /* Smaller subheadings */
+    color: #005f73; /* Teal/blue accent */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600; /* Semi-bold */
+}
+
+p {
+    margin-bottom: 1.1em;
+    font-size: 1rem;
+    color: #4a5568; /* Medium grey text */
+}
+
+a {
+    color: #007a8c; /* Slightly brighter teal/blue */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #005f73; /* Darker teal/blue hover */
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 0.6em;
+    position: relative;
+    padding-left: 22px;
+}
+ul li::before {
+    content: '•'; /* Simple dot bullet */
+    position: absolute;
+    left: 0;
+    color: #007a8c; /* Teal/blue bullet */
+    font-size: 1.2em;
+    line-height: 1;
+    top: 4px;
+}
+
+
+/* Header */
+header {
+    background-color: #ffffff; /* White header */
+    color: #1a2b3c;
+    padding: 1em 0;
+    position: sticky;
+    top: 0; /* Adjusted by inline style in HTML for switcher */
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Very subtle shadow */
+    border-bottom: 1px solid #e2e8f0; /* Light border */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #1a2b3c;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+    padding-left: 0; /* Override */
+}
+header nav ul li::before {
+    content: none; /* Override */
+}
+
+header nav ul li a {
+    color: #4a5568; /* Medium grey nav links */
+    font-weight: 500; /* Medium weight */
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #005f73; /* Teal/blue hover */
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #f7fafc; /* Very light grey-blue */
+    color: #1a2b3c;
+    text-align: center;
+    padding: 6em 0;
+    border-bottom: 1px solid #e2e8f0;
+    /* Optional: Subtle pattern or gradient */
+    /* background-image: linear-gradient(to bottom, #f7fafc, #edf2f7); */
+}
+
+#hero h1 {
+    color: #1a2b3c;
+}
+
+#hero .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 1.8em;
+    color: #4a5568;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007a8c; /* Teal/blue */
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 6px; /* Slightly rounded */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 122, 140, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #005f73; /* Darker teal/blue */
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 122, 140, 0.3);
+}
+
+/* Sections */
+section {
+    padding: 4.5em 0;
+    border-bottom: 1px solid #e2e8f0; /* Light separator */
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
+#about {
+    background-color: #ffffff; /* White */
+}
+
+#services {
+    background-color: #f7fafc; /* Light grey-blue */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2.5em;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Subtle card shadow */
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.08);
+}
+
+.service-item img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+    display: block;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    font-size: 1.3em; /* Consistent with H3 style */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #edf2f7; /* Slightly darker grey-blue */
+    text-align: center;
+    padding: 5em 0;
+}
+
+#contact h2 {
+    text-align: center; /* Center contact header */
+    border-bottom-color: #005f73; /* Teal/blue accent */
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    color: #2d3748; /* Darker grey for emphasis */
+}
+
+.contact-email a {
+    color: #005f73;
+    font-weight: 600; /* Semi-bold email */
+}
+.contact-email a:hover {
+    color: #007a8c;
+}
+
+/* Footer */
+footer {
+    background-color: #1a2b3c; /* Dark blue footer */
+    color: #a0aec0; /* Light grey text */
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 0; /* Remove margin as last section has padding */
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    color: #a0aec0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 1em;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        text-align: center; /* Center headers on mobile */
+    }
+
+    #hero {
+        padding: 5em 0;
+    }
+
+    section {
+        padding: 3.5em 0;
+    }
+
+    .service-item {
+        text-align: center; /* Center service items on mobile */
+    }
+    .service-item h3 {
+         text-align: center;
+    }
+}

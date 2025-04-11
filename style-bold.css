@@ -1,0 +1,318 @@
+/* Style Option 3: Bold & Authoritative */
+
+/* General Styles */
+body {
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif; /* Strong, readable sans-serif */
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light text on dark backgrounds */
+    background-color: #1a1a1a; /* Very dark grey/near black */
+}
+
+.container {
+    width: 88%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* Bold, modern sans-serif for headings */
+    color: #ffffff; /* White headings */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.4em;
+    margin-bottom: 1.1em;
+    text-align: center;
+    padding-bottom: 0.6em;
+    border-bottom: 2px solid #008080; /* Teal accent */
+    color: #f5f5f5; /* Slightly off-white */
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #00a0a0; /* Brighter Teal for subheadings */
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+}
+
+p {
+    margin-bottom: 1.2em;
+    font-size: 1rem;
+    color: #cccccc; /* Lighter grey for paragraphs */
+}
+
+a {
+    color: #00a0a0; /* Teal links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00d0d0; /* Brighter teal hover */
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 0.7em;
+    position: relative;
+    padding-left: 25px;
+}
+ul li::before {
+    content: '▶'; /* Arrow bullet */
+    position: absolute;
+    left: 0;
+    color: #008080; /* Teal bullet */
+    font-size: 0.9em;
+    top: 3px;
+}
+
+
+/* Header */
+header {
+    background-color: #111111; /* Black header */
+    color: #fff;
+    padding: 1.2em 0; /* Slightly more padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #008080; /* Teal accent */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 35px;
+    padding-left: 0; /* Override */
+}
+header nav ul li::before {
+    content: none; /* Override */
+}
+
+header nav ul li a {
+    color: #d0d0d0;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-transform: uppercase; /* Uppercase nav */
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00d0d0; /* Bright teal hover */
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    /* Using a strong industrial/energy image */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.pexels.com/photos/228094/pexels-photo-228094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+    background-color: #111; /* Fallback */
+    color: #ffffff;
+    text-align: center;
+    padding: 8em 0; /* Generous padding */
+}
+
+#hero h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#hero .subtitle {
+    font-size: 1.4em;
+    margin-bottom: 2.2em;
+    color: #e0e0e0;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #008080; /* Teal */
+    color: #ffffff;
+    padding: 15px 40px; /* Larger button */
+    border-radius: 4px; /* Sharp corners */
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 128, 128, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #00a0a0; /* Brighter teal */
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 128, 128, 0.4);
+}
+
+/* Sections */
+section {
+    padding: 5em 0;
+    border-bottom: 1px solid #333; /* Darker border */
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
+
+#about {
+    background-color: #222; /* Dark grey */
+}
+
+#services {
+    background-color: #1a1a1a; /* Match body */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* More gap */
+    margin-top: 3em;
+}
+
+.service-item {
+    background-color: #2a2a2a; /* Slightly lighter dark grey */
+    padding: 2.5em;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left */
+}
+
+.service-item:hover {
+    transform: scale(1.03); /* Scale up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-item img {
+    border-radius: 4px;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+    filter: grayscale(30%); /* Slightly desaturate images */
+    transition: filter 0.3s ease;
+}
+.service-item:hover img {
+    filter: grayscale(0%);
+}
+
+.service-item h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5em;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #222; /* Dark grey */
+    text-align: center;
+}
+
+#contact h2 {
+    border-bottom-color: #008080; /* Teal accent */
+}
+
+.contact-email {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 1.5em;
+    color: #f0f0f0;
+}
+
+.contact-email a {
+    color: #00a0a0; /* Teal */
+    font-weight: 700;
+}
+.contact-email a:hover {
+    color: #00d0d0; /* Brighter teal */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Black footer */
+    color: #888; /* Grey text */
+    text-align: center;
+    padding: 2.5em 0;
+    margin-top: 4em;
+    font-size: 0.9em;
+    border-top: 3px solid #008080; /* Teal accent */
+}
+
+footer p {
+    margin: 0;
+    color: #888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 1em;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 0.6em 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #hero {
+        padding: 6em 0;
+    }
+
+    section {
+        padding: 4em 0;
+    }
+}
